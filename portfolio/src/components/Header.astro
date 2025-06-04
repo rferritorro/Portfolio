@@ -10,7 +10,7 @@ const { availableLocales, translations } = Astro.props;
   <!-- Header component for md size -->
   <div id="header" class="fixed top-full text-white left-1/2 transform -translate-x-1/2 -translate-y-full hover:opacity-100 z-100 md:w-200 md:block md:p-4 sm:hidden hidden bg-transparent">
     <div id="section-header" class="flex flex-wrap w-full p-4 rounded-4xl divide-x-4 divide-black-200 border-4 border-gray-200">
-      <SocialNetworks client:load/>
+      <SocialNetworks/>
       <div class="flex flex-wrap items-center justify-center gap-4 w-1/2">
         <ul class="flex flex-wrap justify-center gap-4 m-1 w-full text-base text-md ">
           <LanguageContext translations={translations} client:load/>
