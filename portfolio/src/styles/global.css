@@ -192,7 +192,7 @@ div#drawer-navigation {
     background-image:
       radial-gradient(circle at 15% 30%,rgba(255, 255, 255, 0.569), transparent 15%),
       radial-gradient(circle at 35% 80%,rgba(255, 255, 255, 0.569), transparent 15%),
-      radial-gradient(circle at 75% 40%,rgba(255, 255, 255, 0.569), transparent 25%);
+      radial-gradient(circle at 75% 40%,rgba(0, 0, 0, 0.569), transparent 25%);
       background-repeat: no-repeat;
       background-size: cover;
   }
@@ -255,7 +255,7 @@ div#drawer-navigation {
     background-color: #000000;
     background-image:
       radial-gradient(circle at 15% 30%,rgba(255, 255, 255, 0.569), transparent 15%),
-      radial-gradient(circle at 35% 80%,rgba(255, 255, 255, 0.569), transparent 15%),
+      radial-gradient(circle at 30% 80%,rgba(255, 255, 255, 0.569), transparent 12.5%),
       radial-gradient(circle at 75% 40%,rgba(255, 255, 255, 0.569), transparent 25%);
       background-repeat: no-repeat;
       background-size: cover;
