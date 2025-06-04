@@ -1,0 +1,40 @@
+---
+import './src/styles/global.css'
+import './src/styles/animate_hand.css'
+import LoadingScreen from '../components/LoadingScreen.astro';
+
+---
+<!doctype html>
+<html lang='es'>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+	</head>
+	<body>
+		<slot />
+		<LoadingScreen />
+	</body>
+</html>
+
+<style>
+	html,
+	body {
+		margin: 0;
+		width: 100%;
+		height: 100%;
+	}
+</style>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const loadingScreen = document.getElementById('loading-screen');
+    if (loadingScreen) {
+      loadingScreen.style.opacity = '0'; // empieza el fade-out
+
+      // Espera la duración de la transición y luego ocúltalo del DOM
+      setTimeout(() => {
+        loadingScreen.style.display = 'none';
+      }, 500); // igual al tiempo en `transition`
+    }
+  });

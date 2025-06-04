@@ -1,0 +1,76 @@
+---
+import LanguageContext from './LanguageContext.jsx';
+import LanguageSelector from './LanguageSelector';
+import ThemeIcon from './ThemeIcon.astro';
+import SocialNetworks  from './SocialNetworks.astro';
+
+const { availableLocales, translations } = Astro.props;
+
+---
+  <!-- Header component for md size -->
+  <div id="header" class="fixed top-full text-white left-1/2 transform -translate-x-1/2 -translate-y-full hover:opacity-100 z-100 md:w-200 md:block md:p-4 sm:hidden hidden bg-transparent">
+    <div id="section-header" class="flex flex-wrap w-full p-4 rounded-4xl divide-x-4 divide-black-200 border-4 border-gray-200">
+      <SocialNetworks client:load/>
+      <div class="flex flex-wrap items-center justify-center gap-4 w-1/2">
+        <ul class="flex flex-wrap justify-center gap-4 m-1 w-full text-base text-md ">
+          <LanguageContext translations={translations} client:load/>
+        </ul>
+      </div>
+      
+      <div class="flex items-center justify-center gap-2 w-1/4">
+        <LanguageSelector availableLocales={availableLocales} client:only="react"/>
+        <ThemeIcon/>
+      </div>
+    </div>
+  </div>
+  <!-- Header component for sm and mobile size -->
+  <div class="md:hidden xl:hidden w-1/2 fixed z-999">
+    <div class="flex flex-wrap justify-center gap-2 w-auto top-2.5 right-5 m-4 fixed">
+      <LanguageSelector availableLocales={availableLocales} client:only="react"/>
+      <ThemeIcon/>
+    </div>
+    <div class="md:hidden xl:hidden gap-2 bottom-2.5 right-5 m-4 fixed">
+      <SocialNetworks />
+    </div>
+    <button  id="button-menu" class="text-white fixed top-2.5 left-5 m-4" type="button" onclick=MenuSidebar('open');>
+      <svg id="icon-menu" fill="white" class="w-10 h-10 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 17 14">
+        <path d="M16 2H1a1 1 0 0 1 0-2h15a1 1 0 1 1 0 2Zm0 6H1a1 1 0 0 1 0-2h15a1 1 0 1 1 0 2Zm0 6H1a1 1 0 0 1 0-2h15a1 1 0 0 1 0 2Z"/>
+      </svg>
+    </button>
+    <div id="drawer-navigation" class="fixed top-0 left-0 sm:w-1/5 w-1/2 h-full p-4 transform -translate-x-full transition-transform duration-300 ease-in-out z-500">
+      <button type="button" class="text-gray-400 bg-transparent text-sm p-1.5 absolute top-2.5 end-2.5 inline-flex items-center" onclick=MenuSidebar('close');>
+          <svg aria-hidden="true" class="w-8 h-8 icon-cross" fill="white" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+      </button>
+      <div class="flex flex-col h-full max-sm:mt-5">
+        <ul class="space-y-2 text-center text-lg">
+          <LanguageContext translations={translations} client:load/>
+        </ul>
+      </div>
+    </div>
+  </div>
+<script is:inline>   
+  const header = document.getElementById('header');
+  const drawer_navigation = document.getElementById('drawer-navigation');
+  const button_menu = document.getElementById('button-menu');
+
+  const MenuSidebar = (action) => {
+    if (action === "open") {
+      drawer_navigation.classList.remove('-translate-x-full');
+      drawer_navigation.classList.add('translate-x-0');
+      button_menu.classList.add('hidden');
+    } else if (action === "close") {
+      drawer_navigation.classList.remove('translate-x-0');
+      drawer_navigation.classList.add('-translate-x-full');
+      button_menu.classList.remove('hidden');
+    }
+  };
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 10) {
+        header.classList.add('opacity-60');
+        header.classList.remove('opacity-100');
+      } else {
+        header.classList.add('opacity-100');
+        header.classList.remove('opacity-60');
+      }
+    });
+</script>

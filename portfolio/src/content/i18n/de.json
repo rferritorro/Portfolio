@@ -1,0 +1,21 @@
+{
+  "welcome": "Willkommen in meinem Portfolio",
+  "introduction": "Einleitung",
+  "about": "Über mich",
+  "projects": "Projekte",
+  "contact": "Kontakt",
+  "experience": "Erfahrung",
+  "greeting_hi": "Hallo",
+  "greeting_whoami": "Ich bin",
+  "greeting_intro": "Webentwickler mit Erfahrung in Odoo, Künstlicher Intelligenz und Big Data.",
+  "download_cv_button": "Lebenslauf herunterladen",
+  "contact_title": "Kontaktiere mich",
+  "contact_name": "Name",
+  "contact_subtitle": "Hast du Fragen oder möchtest du mit mir zusammenarbeiten?",
+  "contact_email_placeholder": "Gib deine E-Mail-Adresse ein",
+  "contact_message_placeholder": "Gib deine Nachricht ein",
+  "contact_name_placeholder": "Gib deinen Namen ein",
+  "contact_email": "E-Mail",
+  "contact_message": "Nachricht",
+  "contact_button": "Nachricht senden"
+}

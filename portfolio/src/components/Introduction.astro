@@ -1,0 +1,35 @@
+---
+import MyDescription from "./MyDescription.jsx";
+import Image from "astro/components/Image.astro";
+import ProfileImage from "../assets/dark-profile.png";
+import ProfileImageWhite from "../assets/white-profile.png";
+const { translations } = Astro.props;
+---
+
+<section id="introduction-section" class="w-full h-full p-4 flex flex-col sm:flex-row md:flex-row justify-center items-center">
+  <div id="profile-image-container"
+    data-aos="fade-up"
+    class="md:w-1/2 sm:w-1/2 w-full md:sm:mt-0 mt-12 h-full flex justify-center items-center"
+  >
+    <div
+      class="w-full sm:flex sm:justify-center"
+    >
+      <Image
+        id="profile-image-dark"
+        src={ProfileImage}
+        alt="Perfil"
+        class="md:w-1/2 w-full sm:w-2/3 img-transparent md:border-[10px] border-double border-white sm:border-[8px] border-[6px]"
+      />
+      <Image
+        id="profile-image-white"
+        src={ProfileImageWhite}
+        alt="Perfil"
+        class="md:w-1/2 w-full sm:w-2/3 img-transparent md:border-[10px] border-double border-black sm:border-[8px] border-[6px]"
+      />
+    </div>
+  </div>
+
+  <div data-aos="fade-up" id="my-description" class="md:w-1/2 sm:w-1/2 w-full h-full flex flex-col md:justify-center justify-center items-start text-white">
+    <MyDescription translations={translations} client:load/>
+  </div>
+</section>

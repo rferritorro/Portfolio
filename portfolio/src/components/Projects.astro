@@ -1,0 +1,31 @@
+---
+import CardProject from "./CardProject";
+import MobileProject from "./MobileProject";
+import TitleProjects from "./TitleProjects.jsx";
+import { getCollection } from "astro:content";
+const projects = await getCollection("projects");
+
+const { translations } = Astro.props;
+
+---
+
+<section id="project-section" class="w-full h-full py-8 px-8 mx-auto md:hidden sm:block block">
+    <div class="flex items-center justify-center">
+        <div class="flex items-center w-full max-w-md sm:max-w-xs">
+            <div id="top-line-description" class="flex-grow h-[3px] w-30 sm:w-15"></div>
+                <TitleProjects translations={translations} type="projects" client:load/> 
+            <div id="top-line-description" class="flex-grow h-[3px] w-30 sm:w-15"></div>
+        </div>
+    </div>
+    <MobileProject projects={projects} client:load/>
+</section>
+<section id="project-section" class="w-full h-full py-8 px-8 mx-auto md:block sm:hidden hidden">
+    <div class="flex items-center justify-center">
+        <div class="flex items-center w-full max-w-md">
+            <div id="top-line-description" class="flex-grow h-[3px] w-30"></div>
+                <TitleProjects translations={translations} type="projects" client:load/> 
+            <div id="top-line-description" class="flex-grow h-[3px] w-30"></div>
+        </div>
+    </div>
+    <CardProject projects={projects} client:load/>
+</section>

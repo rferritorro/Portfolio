@@ -1,0 +1,410 @@
+@import "tailwindcss";
+@import "aos/dist/aos.css";
+
+
+@font-face {
+  font-family: 'SupremeSpike';
+  src: url('/src/assets/type/SupremeSpike-KVO8D.oft') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+#my-description p {
+  font-family: 'SupremeSpike';
+}
+
+html.dark svg#icon-network, html.dark svg .icon-cross, html.dark svg#icon-menu {
+  fill: #000000;
+}
+
+html.dark svg#icon-network path{
+  stroke: #ffffff;
+}
+
+.img-transparent {
+  mask-image: linear-gradient(black 60%, transparent);
+}
+html.dark .img-transparent {
+  mask-image: linear-gradient(rgb(255, 255, 255) 60%, transparent);
+}
+#profile-image-dark {
+  display: block;
+}
+html.dark #profile-image-dark {
+  display: none;
+}
+
+#profile-image-white {
+  display: none;
+}
+html.dark #profile-image-white {
+  display: block;
+}
+
+html.dark div#drawer-navigation {
+  background: white;
+  color: black;
+}
+div#drawer-navigation {
+  background: black;
+  color: white;
+}
+
+.custom-gradient-bg-alternative-2 {
+  background-color: #000000;
+  background-image:
+    radial-gradient(circle at 85% 20%,rgba(255, 255, 255, 0.771), transparent 15%),
+    radial-gradient(circle at 30% 30%,rgba(255, 255, 255, 0.771), transparent 35%);
+
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.custom-gradient-bg-alternative {
+  background-color: #000000;
+  background-image:
+    radial-gradient(circle at 70% 60%, rgba(255, 255, 255, 0.569), transparent 25%),
+    radial-gradient(circle at 35% 45%, rgba(255, 255, 255, 0.569), transparent 25%);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+@media (min-width: 0px) {
+  #introduction-section {
+    background-color: #000000;
+    background-image:
+      radial-gradient(circle at 50% 20%, rgba(255, 255, 255, 0.771), transparent 35%);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  html.dark #introduction-section {
+    background-color: #d6cdcdc7;
+    background-image:
+      radial-gradient(circle at 50% 20%, rgba(0, 0, 0, 0.771), transparent 35%);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #project-section {
+    background-color: #000000;
+    background-image:
+      radial-gradient(circle at 60% 80%, rgba(255, 255, 255, 0.569), transparent 15%),
+      radial-gradient(circle at 35% 45%, rgba(255, 255, 255, 0.569), transparent 25%);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  html.dark #project-section {
+    background-color: #d6cdcdc7;
+    background-image:
+      radial-gradient(circle at 60% 80%, rgba(0, 0, 0, 0.569), transparent 25%),
+      radial-gradient(circle at 35% 45%, rgba(0, 0, 0, 0.569), transparent 25%);
+  }
+  #contact-section {
+    background-color: #000000;
+    background-image:
+      radial-gradient(circle at 10% 30%, rgba(255, 255, 255, 0.771), transparent 25%),
+      radial-gradient(circle at 30% 80%, rgba(255, 255, 255, 0.771), transparent 35%),
+      radial-gradient(circle at 80% 45%,rgba(255, 255, 255, 0.771), transparent 20%);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  html.dark #contact-section {
+    background-color: #d6cdcdc7;
+    background-image:
+      radial-gradient(circle at  10% 30%, rgba(0, 0, 0, 0.771), transparent 25%),
+      radial-gradient(circle at 30% 80%, rgba(0, 0, 0, 0.771), transparent 35%),  
+      radial-gradient(circle at 80% 45%,rgba(0, 0, 0, 0.771), transparent 20%);
+  }
+  html.dark #about-section {
+    background-color: #d6cdcdc7;
+    background-image:
+      radial-gradient(circle at 15% 30%,rgba(0, 0, 0, 0.771), transparent 15%),
+      radial-gradient(circle at 35% 80%,rgba(0, 0, 0, 0.771), transparent 15%),
+      radial-gradient(circle at 75% 40%,rgba(0, 0, 0, 0.771), transparent 35%);
+  }
+  #about-section {
+    background-color: #000000;
+    background-image:
+      radial-gradient(circle at 15% 30%,rgba(255, 255, 255, 0.569), transparent 15%),
+      radial-gradient(circle at 35% 80%,rgba(255, 255, 255, 0.569), transparent 15%),
+      radial-gradient(circle at 75% 40%,rgba(255, 255, 255, 0.569), transparent 25%);
+      background-repeat: no-repeat;
+      background-size: cover;
+  }
+}
+
+@media (min-width: 640px) {
+  #introduction-section {
+    background-color: #000000;
+    background-image:
+      radial-gradient(circle at 85% 80%, rgba(255, 255, 255, 0.771), transparent 15%),
+      radial-gradient(circle at 85% 20%, rgba(255, 255, 255, 0.771), transparent 5%),
+      radial-gradient(circle at 25% 35%, rgba(255, 255, 255, 0.771), transparent 35%);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  html.dark #introduction-section {
+    background-color: #d6cdcdc7;
+    background-image:
+      radial-gradient(circle at 85% 80%, rgba(0, 0, 0, 0.771), transparent 15%),
+      radial-gradient(circle at 85% 20%, rgba(0, 0, 0, 0.771), transparent 5%),
+      radial-gradient(circle at 25% 35%, rgba(0, 0, 0, 0.771), transparent 35%);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #project-section {
+    background-color: #000000;
+    background-image:
+      radial-gradient(circle at 70% 60%, rgba(255, 255, 255, 0.569), transparent 25%),
+      radial-gradient(circle at 35% 45%, rgba(255, 255, 255, 0.569), transparent 25%);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  html.dark #project-section {
+    background-color: #d6cdcdc7;
+    background-image:
+      radial-gradient(circle at 70% 60%, rgba(0, 0, 0, 0.569), transparent 25%),
+      radial-gradient(circle at 35% 45%, rgba(0, 0, 0, 0.569), transparent 25%);
+  }
+  #contact-section {
+    background-color: #000000;
+    background-image:
+      radial-gradient(circle at 30% 80%, rgba(255, 255, 255, 0.771), transparent 35%),
+      radial-gradient(circle at 80% 45%,rgba(255, 255, 255, 0.771), transparent 20%);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  html.dark #contact-section {
+    background-color: #d6cdcdc7;
+    background-image:
+      radial-gradient(circle at 30% 80%, rgba(0, 0, 0, 0.771), transparent 35%),  
+      radial-gradient(circle at 80% 45%,rgba(0, 0, 0, 0.771), transparent 20%);
+  }
+  html.dark #about-section {
+    background-color: #d6cdcdc7;
+    background-image:
+      radial-gradient(circle at 15% 30%,rgba(0, 0, 0, 0.771), transparent 15%),
+      radial-gradient(circle at 35% 80%,rgba(0, 0, 0, 0.771), transparent 15%),
+      radial-gradient(circle at 75% 40%,rgba(0, 0, 0, 0.771), transparent 35%);
+  }
+  #about-section {
+    background-color: #000000;
+    background-image:
+      radial-gradient(circle at 15% 30%,rgba(255, 255, 255, 0.569), transparent 15%),
+      radial-gradient(circle at 35% 80%,rgba(255, 255, 255, 0.569), transparent 15%),
+      radial-gradient(circle at 75% 40%,rgba(255, 255, 255, 0.569), transparent 25%);
+      background-repeat: no-repeat;
+      background-size: cover;
+  }
+}
+
+@media (min-width: 768px) {
+  #introduction-section {
+    background-color: #000000;
+    background-image:
+      radial-gradient(circle at 85% 70%, rgba(255, 255, 255, 0.771), transparent 15%),
+      radial-gradient(circle at 85% 20%, rgba(255, 255, 255, 0.771), transparent 5%),
+      radial-gradient(circle at 25% 35%, rgba(255, 255, 255, 0.771), transparent 35%);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  html.dark #introduction-section {
+    background-color: #d6cdcdc7;
+    background-image:
+      radial-gradient(circle at 85% 70%, rgba(0, 0, 0, 0.771), transparent 15%),
+      radial-gradient(circle at 85% 20%, rgba(0, 0, 0, 0.771), transparent 5%),
+      radial-gradient(circle at 25% 35%, rgba(0, 0, 0, 0.771), transparent 35%);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #project-section {
+    background-color: #000000;
+    background-image:
+      radial-gradient(circle at 70% 60%, rgba(255, 255, 255, 0.569), transparent 25%),
+      radial-gradient(circle at 35% 45%, rgba(255, 255, 255, 0.569), transparent 25%);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  html.dark #project-section {
+    background-color: #d6cdcdc7;
+    background-image:
+      radial-gradient(circle at 70% 60%, rgba(0, 0, 0, 0.569), transparent 25%),
+      radial-gradient(circle at 35% 45%, rgba(0, 0, 0, 0.569), transparent 25%);
+  }
+  #contact-section {
+    background-color: #000000;
+    background-image:
+      radial-gradient(circle at 30% 80%, rgba(255, 255, 255, 0.771), transparent 35%),
+      radial-gradient(circle at 80% 45%,rgba(255, 255, 255, 0.771), transparent 20%);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  html.dark #contact-section {
+    background-color: #d6cdcdc7;
+    background-image:
+      radial-gradient(circle at 30% 80%, rgba(0, 0, 0, 0.771), transparent 35%),  
+      radial-gradient(circle at 80% 45%,rgba(0, 0, 0, 0.771), transparent 20%);
+  }
+  html.dark #about-section {
+    background-color: #d6cdcdc7;
+    background-image:
+      radial-gradient(circle at 15% 30%,rgba(0, 0, 0, 0.771), transparent 15%),
+      radial-gradient(circle at 75% 70%,rgba(0, 0, 0, 0.771), transparent 15%);
+  }
+  #about-section {
+    background-color: #000000;
+    background-image:
+      radial-gradient(circle at 15% 30%,rgba(255, 255, 255, 0.569), transparent 15%),
+      radial-gradient(circle at 35% 80%,rgba(255, 255, 255, 0.569), transparent 15%),
+      radial-gradient(circle at 75% 40%,rgba(255, 255, 255, 0.569), transparent 25%);
+      background-repeat: no-repeat;
+      background-size: cover;
+  }
+}
+
+.timeline-card {
+    background: linear-gradient(135deg, #ffffff83, #000000);
+
+}
+
+.timeline-card-2 {
+    background: rgb(0, 0, 0);
+}
+
+html.dark .timeline-card-2 {
+    background: rgb(255, 255, 255);
+}
+
+html h1,html p, #title-card{
+  color: #ffffff;
+}
+html.dark h1,html.dark h2, html.dark label, html.dark h1 span,html.dark p, html.dark h3,html.dark #title-card, html.dark time {
+  color: #000000;
+}
+
+input , textarea {
+  background-color: #00000058;
+  color: #ffffff;
+  border: 2px solid #d6cdcdc7;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+html.dark input ,html.dark textarea{
+  background-color: #d6cdcdc7;
+  color: #000000;
+  border: 2px solid #000000fb;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+html.dark #slider {
+  background-color: #d6cdcd67;
+}
+#slider , html.dark #timeline-line{
+  background-color: #0000007d;
+}
+#top-line-description, html.dark #bottom-line-description{
+  background-color: #ffffff;
+}
+html.dark #top-line-description, html.dark #bottom-line-description{
+  background-color: #000000;
+}
+#header div#section-header {
+  background: linear-gradient(170deg, #000000, #3a3a3a);
+}
+
+
+html.dark section {
+  color: black;
+}
+section {
+  color: #ffffff;
+}
+
+html.dark #header div#section-header {
+  background: linear-gradient(135deg, #ffffff, #a5a5ab);
+  color: #000000;
+  border: black 4px solid;
+}
+
+html.dark #header div#section-header div a:hover{
+  color: #ffffff;
+}
+
+html.dark #ul-selector, html.dark .cards {
+  background-color: black;
+}
+
+html.dark .boton-bonito {
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #ffffff, #a5a5ab);
+  color: rgb(0, 0, 0);
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.75rem;
+  cursor: pointer;
+}
+
+#div-icon {
+  background-color: transparent;
+  color: #ffffff;
+}
+
+html.dark #div-icon {
+  background-color: transparent;
+  color: #000000;
+}
+
+html.dark #shadow_block {
+  background-color: #000000;
+}
+#shadow_block {
+  background-color: #ffffff;
+}
+html.dark .boton-bonito:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 20px #a5a5ab;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+html.dark .boton-bonito:active {
+  transform: scale(0.98);
+  box-shadow: 0 5px 10px  #a5a5ab;
+}
+
+#contact_panel {
+  background: linear-gradient(190deg,#000000, #514f4f);
+  color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+html.dark #contact_panel {
+  background: linear-gradient(135deg, #aca9a9, #a5a5ab);
+  color: black;
+
+}
+.boton-bonito {
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #000000, #a5a5ab);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.75rem;
+  cursor: pointer;
+}
+
+.boton-bonito:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 20px #a5a5ab;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+}
+
+.boton-bonito:active {
+  transform: scale(0.98);
+  box-shadow: 0 5px 10px  #a5a5ab;
+}

@@ -1,0 +1,13 @@
+---
+import TimeLine from './TimeLine.jsx';
+import { getCollection } from "astro:content";
+const experiences = await getCollection("experiences");
+
+const { translations } = Astro.props;
+---
+
+<section id="about-section" class="w-full h-full flex justify-center items-center">
+  <div class="w-full h-full flex justify-center items-center p-4" data-aos="fade-up">
+    <TimeLine translations={translations} experiences={experiences} client:load/>
+  </div>
+</section>

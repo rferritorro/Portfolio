@@ -1,0 +1,39 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Contact from '../components/Contact.jsx';
+import Projects from '../components/Projects.astro';
+import AboutMe from '../components/AboutMe.astro';
+import Introduction from '../components/Introduction.astro';
+import Header from '../components/Header.astro';
+import { getEntry } from 'astro:content';
+import type React from 'react';
+
+const translations = {
+  es: await getEntry('i18n', 'es'),
+  en: await getEntry('i18n', 'en'),
+  de: await getEntry('i18n', 'de')
+};
+const availableLocales = [
+	{ code: 'es', name: 'ES', flagUrl: 'es.png' },
+  	{ code: 'en', name: 'EN', flagUrl: 'en.png' },
+  	{ code: 'de', name: 'DE', flagUrl: 'de.png' },
+];
+---
+
+<Layout title="Portfolio">
+    <Header availableLocales={availableLocales} translations={translations}/>
+    <main>
+      <div id="introduction" class="flex items-center justify-center h-screen">
+        <Introduction translations={translations}/>
+      </div>
+      <div id="my-projects" class="flex items-center justify-center h-screen">
+        <Projects translations={translations}/>
+      </div>
+      <div id="about-me" class="flex items-center justify-center h-screen">
+        <AboutMe translations={translations}/>
+      </div>
+      <div id="contact-me" class="flex items-center justify-center h-screen">
+        <Contact translations={translations} client:load/>
+      </div>
+    </main>
+</Layout>

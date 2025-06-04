@@ -1,0 +1,47 @@
+---
+
+---
+<div id="loading-screen">
+  <div class="spinner"></div>
+</div>
+
+<style>
+#loading-screen {
+  position: fixed;
+  inset: 0;
+  background: rgb(0, 0, 0);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+  pointer-events: none; /* Evita clics si está visible */
+}
+html.dark #loading-screen {
+  background: rgb(255, 255, 255);
+}
+
+html.dark .spinner {
+    width: 50px;
+    height: 50px;
+    border: 6px solid #2f2f2f;
+    border-top: 6px solid #ffffff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  .spinner {
+    width: 50px;
+    height: 50px;
+    border: 6px solid #ffffff;
+    border-top: 6px solid #000000;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+</style>
